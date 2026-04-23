@@ -8,7 +8,7 @@ app.use(cors());
 
 app.get("/data", async (req, res) => {
   const response = await getRedditData();
-  res.send(response.data);
+  res.send(response);
 });
 
 app.listen(3000, async () => {

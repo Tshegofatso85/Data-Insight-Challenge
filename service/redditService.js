@@ -3,7 +3,14 @@ const axios = require("axios");
 const getRedditData = async () => {
   try {
     const response = await axios.get("https://www.reddit.com/r/popular.json");
-    return response.data;
+    const posts = response.data.data.children.map((post) => ({
+      title: post.data.title,
+      subreddit: post.data.subreddit,
+      upvotes: post.data.ups,
+      created: post.data.created,
+    }));
+
+    return posts;
   } catch (error) {
     console.log(`Error fetching reddit data: ${error.message}`);
     return [];
