@@ -1,12 +1,13 @@
 const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
+const { getRedditData } = require("./service/redditService");
 
 const app = express();
 app.use(cors());
 
-app.get("/", async (req, res) => {
-  const response = await axios.get("https://www.reddit.com/r/popular.json");
+app.get("/data", async (req, res) => {
+  const response = await getRedditData();
   res.send(response.data);
 });
 
