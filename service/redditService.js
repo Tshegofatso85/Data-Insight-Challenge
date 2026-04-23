@@ -1,4 +1,5 @@
 const axios = require("axios");
+const { extractInsights } = require("../utils/analyzer");
 
 const getRedditData = async () => {
   try {
@@ -17,4 +18,9 @@ const getRedditData = async () => {
   }
 };
 
-module.exports = { getRedditData };
+const getRedditInsight = async () => {
+  const posts = await getRedditData();
+  return extractInsights(posts);
+};
+
+module.exports = { getRedditData, getRedditInsight };

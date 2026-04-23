@@ -1,13 +1,18 @@
 const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
-const { getRedditData } = require("./service/redditService");
+const { getRedditData, getRedditInsight } = require("./service/redditService");
 
 const app = express();
 app.use(cors());
 
 app.get("/data", async (req, res) => {
   const response = await getRedditData();
+  res.send(response);
+});
+
+app.get("/insight", async (req, res) => {
+  const response = await getRedditInsight();
   res.send(response);
 });
 
