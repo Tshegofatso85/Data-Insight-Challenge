@@ -37,7 +37,7 @@ export default function Dashboard() {
   if (error) return <ErrorMessage message={error} />;
 
   return (
-    <div className="dashboard">
+    <div className="dashboard-header">
       <h1>Trending Insights Dashboard</h1>
 
       <button onClick={fetchInsights}>Refresh</button>
