@@ -15,8 +15,8 @@ app.get("/insight", async (req, res) => {
   res.send(response);
 });
 
-app.listen(3000, async () => {
-  console.log(`Server started on port 3000: http://localhost:3000`);
+app.listen(5000, async () => {
+  console.log(`Server started on port 5000: http://localhost:5000`);
 });
 
 module.exports = app;

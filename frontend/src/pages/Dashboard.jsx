@@ -17,7 +17,7 @@ export default function Dashboard() {
       setLoading(true);
       setError("");
 
-      const response = await axios.get("http://localhost:3000/insight");
+      const response = await axios.get("http://localhost:5000/insight");
 
       setData(response.data);
     } catch (error) {

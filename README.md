@@ -1,6 +1,7 @@
 # 🔥 Trending Insights Dashboard
 
 ## 📌 Overview
+
 This is a full-stack application that answers the question:
 
 > **“What is trending right now, and what can we learn from it?”**
@@ -23,11 +24,13 @@ The app fetches real-time data from Reddit, processes it, and presents meaningfu
 ## ⚙️ Tech Stack
 
 ### Backend
+
 - Node.js
 - Express
 - Axios
 
 ### Frontend
+
 - React
 - Recharts
 - Axios
@@ -40,9 +43,9 @@ The app fetches real-time data from Reddit, processes it, and presents meaningfu
   https://www.reddit.com/r/popular.json
 
 ### Endpoint:
-  /data → Returns raw Reddit data
-  /insights → Returns processed insights (keywords, charts, summary)
 
+/data → Returns raw Reddit data
+/insights → Returns processed insights (keywords, charts, summary)
 
 ---
 
@@ -58,25 +61,30 @@ The app fetches real-time data from Reddit, processes it, and presents meaningfu
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/Tshegofatso85/Data-Insight-Challenge.git
 cd Data-Insight-Challenge/
 ```
+
 Setup Backend:
+
 ```bash
 cd backend
 npm install
-npm run dev   # or: node server.js
+npm run dev   # or: src/node server.js
 ```
+
 Backend runs on:
-  http://localhost:5000
+http://localhost:5000
 
 Setup Frontend:
+
 ```bash
 cd frontend
 npm install
 npm start
 ```
-Frontend runs on:
-  http://localhost:3000
 
+Frontend runs on:
+http://localhost:3000
