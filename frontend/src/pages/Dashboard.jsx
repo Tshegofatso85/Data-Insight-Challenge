@@ -37,21 +37,10 @@ export default function Dashboard() {
   if (error) return <ErrorMessage message={error} />;
 
   return (
-    <div style={{ padding: "20px", maxWidth: "1000px", margin: "0 auto" }}>
+    <div className="dashboard">
       <h1>Trending Insights Dashboard</h1>
 
-      <button
-        onClick={fetchInsights}
-        style={{
-          padding: "8px 12px",
-          cursor: "pointer",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-          background: "#f5f5f5",
-        }}
-      >
-        Refresh
-      </button>
+      <button onClick={fetchInsights}>Refresh</button>
 
       <Summary summary={data.summary} />
 
@@ -59,11 +48,11 @@ export default function Dashboard() {
 
       <SubredditChart subreddit={data.subredditDistribution} />
 
-      <div style={{ marginTop: "30px" }}>
+      <div className="card">
         <h2>Top Posts 🚀</h2>
         <ul>
           {data.engagement.topPosts.map((post, index) => (
-            <li key={index} style={{ marginBottom: "10px" }}>
+            <li key={index} style={{ marginBottom: "12px" }}>
               <strong>{post.title}</strong>
               <br />
               👍 {post.upvotes} upvotes in r/{post.subreddit}

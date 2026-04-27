@@ -9,23 +9,12 @@ import {
 
 export default function keywordChart({ keywords }) {
   return (
-    <div style={{ marginBottom: "30px" }}>
+    <div className="card">
       <h2>Trending Keywords 🔥</h2>
 
       <div style={{ marginBottom: "20px" }}>
         {keywords.map((keyword) => (
-          <span
-            key={keyword.word}
-            style={{
-              margin: "5px",
-              padding: "6px 12px",
-              background: "#eee",
-              borderRadius: "20px",
-              display: "inline-block",
-              fontSize: "12px",
-              fontWeight: "bold",
-            }}
-          >
+          <span key={keyword.word} className="tag">
             {keyword.word} ({keyword.count})
           </span>
         ))}
@@ -33,10 +22,10 @@ export default function keywordChart({ keywords }) {
 
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={keywords}>
-          <XAxis dataKey="word" />
-          <YAxis />
+          <XAxis dataKey="word" stroke="#e2e8f0" />
+          <YAxis stroke="#e2e8f0" />
           <Tooltip />
-          <Bar dataKey="count" />
+          <Bar dataKey="count" fill="#38bdf8" />
         </BarChart>
       </ResponsiveContainer>
     </div>
