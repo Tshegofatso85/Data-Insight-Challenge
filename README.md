@@ -72,7 +72,7 @@ Setup Backend:
 ```bash
 cd backend
 npm install
-npm run dev   # or: src/node server.js
+npm start   # or: src/node server.js
 ```
 
 Backend runs on:
