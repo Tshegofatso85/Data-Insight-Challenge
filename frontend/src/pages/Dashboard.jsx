@@ -49,8 +49,8 @@ export default function Dashboard() {
       <SubredditChart subreddit={data.subredditDistribution} />
 
       <div className="card">
-        <h2>Top Posts 🚀</h2>
-        <ul>
+        <h2>Top Posts</h2>
+        <ol>
           {data.engagement.topPosts.map((post, index) => (
             <li key={index} style={{ marginBottom: "12px" }}>
               <strong>{post.title}</strong>
@@ -58,7 +58,7 @@ export default function Dashboard() {
               👍 {post.upvotes} upvotes in r/{post.subreddit}
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
     </div>
   );

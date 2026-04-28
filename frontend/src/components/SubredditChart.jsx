@@ -8,7 +8,8 @@ export default function subredditChart({ subreddit }) {
 
   return (
     <div className="card chart-container">
-      <h2>Subreddit Distribution 📊</h2>
+      <h2>Subreddit Distribution</h2>
+
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
           <Pie data={formattedData} dataKey="value" label>
