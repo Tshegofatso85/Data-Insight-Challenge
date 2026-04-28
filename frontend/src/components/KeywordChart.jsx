@@ -9,7 +9,7 @@ import {
 
 export default function keywordChart({ keywords }) {
   return (
-    <div className="card chart-container">
+    <div className="tags-container">
       <h2>Trending Keywords</h2>
 
       <div style={{ marginBottom: "20px" }}>
